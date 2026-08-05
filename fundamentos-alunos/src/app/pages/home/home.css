@@ -1,0 +1,36 @@
+.card {
+    width: 200px;
+    background-color: #edf1f1;
+}
+
+.card-cabecalho {
+    width: 100%;
+    height: 150px;
+    background-color: blue;
+}
+
+.card-cabecalho img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-conteudo {
+    padding: 0 16px;
+}
+
+.nome {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.status {
+    text-align: center;
+    font-weight: 600;
+}
+
+.lista-cards {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}

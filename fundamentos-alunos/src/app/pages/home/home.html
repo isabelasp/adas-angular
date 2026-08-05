@@ -1,0 +1,40 @@
+<h1>{{ titulo }}</h1>
+<h3>{{ subtitulo }}</h3>
+
+<div class="lista-cards">
+
+    <div class="card">
+        <div class="card-cabecalho">
+            <img [src]="aluno1.imagem">
+        </div>
+        <div class="card-conteudo">
+            <p class="nome">{{ aluno1.nome }}</p>
+            <p>{{ aluno1.email }}</p>
+            <p>
+                <strong>Turma:</strong> {{ aluno1.turma }}
+            </p>
+            <p>
+                <strong>Nota final:</strong> {{ aluno1.notaFinal }}
+            </p>
+            <p class="status">{{ aluno1.status }}</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-cabecalho">
+            <img [src]="aluno2.imagem">
+        </div>
+        <div class="card-conteudo">
+            <p class="nome">{{ aluno2.nome }}</p>
+            <p>{{ aluno2.email }}</p>
+            <p>
+                <strong>Turma:</strong> {{ aluno2.turma }}
+            </p>
+            <p>
+                <strong>Nota final:</strong> {{ aluno2.notaFinal }}
+            </p>
+            <p class="status">{{ aluno2.status }}</p>
+        </div>
+    </div>
+
+</div>
