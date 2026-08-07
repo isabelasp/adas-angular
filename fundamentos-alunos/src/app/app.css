@@ -1,0 +1,31 @@
+.principal{
+    height: 100vh;
+}
+.cabecalho {
+    background-color: rgb(98, 167, 224);
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 16px;
+}
+
+h3, a{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.menu a:hover{
+    border-bottom: rgb(238, 10, 227);
+}
