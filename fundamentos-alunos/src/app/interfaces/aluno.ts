@@ -5,5 +5,4 @@ export interface Aluno{
     email: string
     turma: string
     notaFinal: number
-    status: string
 }

@@ -11,6 +11,11 @@
         <p>
             <strong>Nota final:</strong> {{aluno.notaFinal }}
         </p>
-        <p class="status">{{aluno.status }}</p>
     </div>
+    <p class="status" 
+    [ngClass]="{
+        'aprovado' : aluno.notaFinal >= 7,
+        'reprovado' : aluno.notaFinal < 7
+    }">
+        {{aluno.notaFinal >= 7 ? 'APROVADO' : 'REPROVADO'}}</p>
 </div>

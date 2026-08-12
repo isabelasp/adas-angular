@@ -2,7 +2,18 @@
     <div class="cabecalho">
         <h2>Lista de Alunos</h2>
     </div>
-    <div class="lista-cards">  
-        <app-aluno-cards [aluno]=""></app-aluno-cards>  
-    </div>
+     @if (listaAlunos.length === 0) {
+        
+        <p>Nemhum registro de alunos encontrado no banco</p>
+
+    } @else {
+
+        <div class="lista-cards">
+       
+          @for (objetoAluno of listaAlunos; track $index) {
+            <app-aluno-cards [aluno]="objetoAluno"></app-aluno-cards> 
+          }
+
+        </div>
+    }
 </div>
