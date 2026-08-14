@@ -1,7 +1,7 @@
-.aluno-lista{
-    height: 100%;
-    background-color: rgb(49, 45, 45);
+.aluno-lista {
     padding: 16px;
+    background-color: #323232;
+    height: 100%;
 }
 
 .lista-cards {
@@ -10,8 +10,58 @@
     flex-wrap: wrap;
 }
 
-.cabecalho{
+.cabecalho {
     margin: 16px 0;
-    color: white;
+    color: #fff;
+}
 
+p {
+    color: #fff;
+    text-align: center;
+}
+
+.lista-tabela {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+}
+
+table {
+    background-color: #fff;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td, th {
+    padding: 8px 16px;
+}
+
+table thead tr {
+    background-color: #f62f50;
+    color: #fff;
+    text-align: left;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f7bdbd;
+}
+
+.botoes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 16px 0;
+}
+
+.botoes button{
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #ffbc2e;
+    
+}
+
+.botoes button:hover{
+    background-color: #f3ac12;
+    cursor: pointer;
 }

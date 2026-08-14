@@ -33,7 +33,27 @@ export class AlunoLista {
     email: 'Octopus@proway.com',
     turma: 'Adas Dev',
     notaFinal: 3,
-   }]
+   }
+  ]
+  
+  verCards(): void {
+    this.modoExibicao = 'cards'
+  }
 
+  verTabela(): void {
+    this.modoExibicao = 'tabela'
+  }
+
+  todos(): void {
+    this.listaAlunos = this.listaAlunos
+  }
+
+  aprovados(): void {
+    this.listaAlunos = this.listaAlunos.filter(Aluno => Aluno.notaFinal >= 7)
+  }
+
+  reprovados(): void {
+    this.listaAlunos = this.listaAlunos.filter(Aluno => Aluno.notaFinal < 7)
+  }
 
 }

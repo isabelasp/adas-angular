@@ -1,19 +1,48 @@
 <div class="aluno-lista">
-    <div class="cabecalho">
-        <h2>Lista de Alunos</h2>
-    </div>
-     @if (listaAlunos.length === 0) {
-        
-        <p>Nemhum registro de alunos encontrado no banco</p>
-
-    } @else {
-
-        <div class="lista-cards">
-       
-          @for (objetoAluno of listaAlunos; track $index) {
-            <app-aluno-cards [aluno]="objetoAluno"></app-aluno-cards> 
-          }
-
-        </div>
+  <div class="botoes">
+    <button (click)="verCards()">Ver Cards</button>
+    <button (click)="verTabela()">Ver Tabela</button>
+  </div>
+  <div class="botoes">
+    <p>Filtrar por</p>
+    <button (click)="todos()">Todos</button>
+    <button (click)="aprovados()">Aprovados</button>
+    <button (click)="reprovados()">Reprovados</button>
+  </div>
+  <div class="cabecalho">
+    <h2>Lista de Alunos</h2>
+  </div>
+  @if (listaAlunos.length === 0) {
+    <p>Nemhum registro de alunos encontrado no banco</p>
+  } @else {
+    @if (modoExibicao == 'cards') {
+      <div class="lista-cards">
+        @for (objetoAluno of listaAlunos; track $index) {
+          <app-aluno-cards [aluno]="objetoAluno"></app-aluno-cards>
+        }
+      </div>
     }
+    @if (modoExibicao == 'tabela') {
+      <div class="lista-tabela">
+        <table>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Nota</th>
+            <th>Status</th>
+          </tr>
+          <tbody>
+            @for (objetoAluno of listaAlunos; track $index) {
+              <tr>
+                <td>{{ objetoAluno.nome }}</td>
+                <td>{{ objetoAluno.email }}</td>
+                <td>{{ objetoAluno.notaFinal }}</td>
+                <td>{{ objetoAluno.notaFinal >= 7 ? 'Aprovado' : 'Reprovado' }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  }
 </div>
